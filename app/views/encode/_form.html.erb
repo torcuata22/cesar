@@ -1,0 +1,11 @@
+<%= form_with url: encode_index_path, method: :get do |form| %>
+
+    <%= label_tag :phrase, "Enter the text you want to encode: " %>
+    <%= text_field_tag :phrase %>
+    <br>
+    <%= label_tag :num, "Enter the number you wish to use for encoding:" %>
+    <%= number_field_tag :num %>
+
+    <%= submit_tag "Encode" %>
+
+<% end %>

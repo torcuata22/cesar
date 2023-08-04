@@ -1,0 +1,11 @@
+<%= form_with url: decode_index_path, method: :get do |form|%>
+
+    <%= label_tag :phrase, "Enter the text you want to decode: " %>
+    <%= text_field_tag :phrase %>
+    <br>
+    <%= label_tag :num, "Enter the number you used for encoding:" %>
+    <%= number_field_tag :num %>
+
+    <%= submit_tag "Decode" %>
+
+<% end %>

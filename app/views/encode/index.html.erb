@@ -1,2 +1,7 @@
-<h1>Encode#index</h1>
-<p>Find me in app/views/encode/index.html.erb</p>
+<h1>Encode your Text here</h1>
+<%= render "encode/form" %>
+
+
+<% if @encoded_phrase.present? %>
+    <p>Here is your encoded text: <%= @encoded_phrase %></p>
+<% end %>
