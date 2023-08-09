@@ -1,6 +1,8 @@
 <h1>Decode my Text</h1>
-<%= render "form" %>
+<%= render "decode/form" %>
 
 <% if @decoded_phrase.present? %>
-    <p>Here is your decoded text: <%= @cdcoded_phrase %></p>
+    <p>Here is your decoded text: <%= @decoded_phrase %></p>
 <% end %>
+
+<%= link_to  "Home", welcome_index_path %>
