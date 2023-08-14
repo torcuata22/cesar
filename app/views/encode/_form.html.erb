@@ -1,11 +1,13 @@
 <%= form_with url: encode_index_path, method: :get do |form| %>
+<div class="form-group">
+    <%= form.label :phrase, "Enter the text you want to encode: ", class:'form-label' %>
+    <%= form.text_area :phrase, class:'form-control' %>
+</div>
 
-    <%= label_tag :phrase, "Enter the text you want to encode: " %>
-    <%= text_field_tag :phrase %>
-    <br>
-    <%= label_tag :num, "Enter the number you wish to use for encoding:" %>
-    <%= number_field_tag :num %>
+<div class="form-group">
+    <%= form.label :num, "Enter the number you wish to use for encoding:", class:'form-label' %>
+    <%= form.number_field :num, class: 'form-control' %>
 
-    <%= submit_tag "Encode" %>
-
+    <%= submit_tag "Encode", class: 'btn btn-sm btn-dark m-1' %>
+</div>
 <% end %>

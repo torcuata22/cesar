@@ -1,11 +1,13 @@
 <%= form_with url: decode_index_path, method: :get do |form| %>
 
-    <%= label_tag :phrase, "Enter the text you want to decode: " %>
-    <%= text_field_tag :phrase %>
-    <br>
-    <%= label_tag :num, "Enter the number you used for encoding:" %>
-    <%= number_field_tag :num %>
+<div class="form-group">
+    <%= form.label :phrase, "Enter the text you want to decode: ", class: 'form-label' %>
+    <%= form.text_area :phrase, class: 'form-control' %>
+</div>
+<div class="form-group">
+    <%= label_tag :num, "Enter the number you used for encoding: ", class: 'form-label' %>
+    <%= form.number_field :num, class: 'form-control' %>
 
-    <%= submit_tag "Decode" %>
-
+    <%= submit_tag "Decode", class: 'btn btn-sm btn-dark m-1' %>
+</div>
 <% end %>

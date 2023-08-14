@@ -2,7 +2,11 @@
 <%= render "decode/form" %>
 
 <% if @decoded_phrase.present? %>
-    <p>Here is your decoded text: <%= @decoded_phrase %></p>
+<div class="card">
+    <div class="card-body">
+        <p class='card-title fw-bold'>Here is your decoded text: </p>
+        <p class='card-text fs-5'><%= @decoded_phrase %></p>
+    </div>
+</div>
 <% end %>
 
-<%= link_to  "Home", welcome_index_path %>

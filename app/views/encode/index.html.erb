@@ -3,7 +3,72 @@
 
 
 <% if @encoded_phrase.present? %>
-    <p>Here is your encoded text: <%= @encoded_phrase %></p>
+  <div class="card my-5">
+    <div class="card-body my-2">
+      <p class='card-title fw-bold'>Here is your encoded text:</p>
+      <p class='card-text fs-5'><%= @encoded_phrase %></p>
+    </div>
+  </div>
+  <button class="btn btn-sm btn-success" id="copyButton" data-encoded-text="<%= @encoded_phrase %>">Copy</button>
+
 <% end %>
 
-<%= link_to "Home", welcome_index_path %>
+<%# <script>
+  const copyButton = document.getElementById('copyButton');
+
+  copyButton.addEventListener('click', () => {
+    const encodedText = copyButton.getAttribute('data-encoded-text');
+
+    if (encodedText) {
+      const textarea = document.createElement('textarea');
+      textarea.value = encodedText;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+
+      copyButton.textContent = 'Copied!';
+      setTimeout(() => {
+        copyButton.textContent = 'Copy';
+      }, 2000);
+    }
+  });
+</script> %>
+
+<script>
+  document.addEventListener("turbo:load", function() {
+    const copyButton = document.getElementById('copyButton');
+
+    if (copyButton) {
+      copyButton.addEventListener('click', () => {
+        const encodedText = copyButton.getAttribute('data-encoded-text');
+
+        if (encodedText) {
+          const textarea = document.createElement('textarea');
+          textarea.value = encodedText;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+
+          copyButton.textContent = 'Copied!';
+          setTimeout(() => {
+            copyButton.textContent = 'Copy';
+          }, 2000);
+        }
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

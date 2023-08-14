@@ -1,5 +1,6 @@
 class EncodeController < ApplicationController
   def index
+
     alphabet = ('a'..'z').to_a 
     num = params[:num].to_i
     phrase = params[:phrase]&.downcase || ""

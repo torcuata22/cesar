@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CaesarCypher</title>
+    <title>Caesar's Cypher</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'application', crossorigin: 'anonymous' %>
+
   </head>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+ <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag("cipher-wheel.jpeg", alt: "Logo", width:60, height:60,class: "navbar-logo d-inline-block align-top") %>
+      <% end %>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to "Home", welcome_index_path, class: "nav-link" %>
-        </li>
+        <%= link_to "Home", welcome_index_path, class: "nav-link" %>
         <li class="nav-item">
           <%= link_to "Encode", encode_index_path, class: "nav-link" %>
+
         </li>
         <li class="nav-item">
           <%= link_to "Decode", decode_index_path, class: "nav-link" %>
@@ -29,8 +34,9 @@
     </div>
   </div>
 </nav>
+  
   <div class="container">
-  <body>
+ 
     <%= yield %>
   </body>
   </div>
