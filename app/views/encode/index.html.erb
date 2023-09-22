@@ -13,28 +13,6 @@
 
 <% end %>
 
-<%# <script>
-  const copyButton = document.getElementById('copyButton');
-
-  copyButton.addEventListener('click', () => {
-    const encodedText = copyButton.getAttribute('data-encoded-text');
-
-    if (encodedText) {
-      const textarea = document.createElement('textarea');
-      textarea.value = encodedText;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-
-      copyButton.textContent = 'Copied!';
-      setTimeout(() => {
-        copyButton.textContent = 'Copy';
-      }, 2000);
-    }
-  });
-</script> %>
-
 <script>
   document.addEventListener("turbo:load", function() {
     const copyButton = document.getElementById('copyButton');

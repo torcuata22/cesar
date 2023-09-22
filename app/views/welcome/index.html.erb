@@ -1,29 +1,43 @@
-<h1>Welcome to my Caesar Cipher</h1>
-<p>(Add definition and history on Caesar's cipher here, myabe a bit about ancient encryption methods)</p>
+<div class="container my-5">
+    <div class="page-content">
+        <div class="hero custom-hero p-5 shadow-lg rounded shadow-lg">
+            <h1 class="text-center mb-5">Welcome to my Caesar Cipher!</h1>
+            <br>
+            
+            <div class="container">
+                <%= image_tag("Caesar_Cipher.jpeg", alt: "cipher wheel", width:100, height:100,class: "d-inline-block align-center custom-image") %>
+            </div> 
+            <br><br><br><br><br><br>
 
-<p>This is a digital emulator of a Caesar Cipher. This is a substitution cipher, named after 
-Julius Caesar, who, according to historians, used it to protect messages of military significance.
-While Caesar's was the first recorded use of this scheme, other substitution ciphers are known to have been used earlier. 
-</p>
+            <div class="container mt-5">
+            <p>This is a digital emulator of a Caesar Cipher. This is a substitution cipher, named after 
+            Julius Caesar, who, according to historians, used it to protect messages of military significance.
+            While Caesar's was the first recorded use of this scheme, it is not the first. 
+            There are older substitution ciphers than this one. 
+            </p>
 
-<p>No one knows how effective the Caesar cipher was at the time; 
-there is no record at that time of any techniques for the solution of simple 
-substitution ciphers. This type of cipher has become inefficient, since it is suceptible
-for frequency analysis.</p>
- 
-<p>However, this type of cipher was used (disastrously) up to 1915 by the Russian army, who used it as a 
-replacement for more complicated ciphers that had been too difficult for the troops to master.
-As a result, German and Austrian cryptanalysts managed to decrupt their messages with little effort.
-</p>
+            <p>No one knows how effective the Caesar cipher was at the time. 
+            There is no record from that time of any techniques used in the solution of simple 
+            substitution ciphers. This type of cipher has become inefficient, since it is suceptible
+            for frequency analysis.</p>
+            
+            <p>However, this type of cipher was used (disastrously) up to 1915 by the Russian army, who used it as a 
+            replacement for more complicated ciphers that had been too difficult for the troops to master.
+            As a result, German and Austrian cryptanalysts managed to decrypt their messages with little effort.
+            </p>
 
-<p>Nowadays, the Caesar Cipher is used more as a novelty or in toys,  not a method of encryption.
-With all that in mind, go ahead, give it a try, and have some fun with it!
-</p>
-
-<%= link_to "Encode", encode_index_path, class:"btn btn-sm btn-dark text-white" %>
-<%= link_to "Decode", decode_index_path, class:"btn btn-sm btn-dark text-white" %>
-
-
+            <p>Nowadays, the Caesar Cipher is used more as a novelty or in toys,  not a method of encryption.
+            With all that in mind, go ahead, give it a try, and have some fun with it!
+            </p>
+            </div>
+            
+            <div class="d-flex justify-items-center">
+            <%= link_to "Encode", encode_index_path, class:"btn btn-sm btn-outline-light mx-3" %>
+            <%= link_to "Decode", decode_index_path, class:"btn btn-sm btn-outline-light mx-3" %>
+            </div>
+        </div>
+    </div>    
+</div>
 
 
 

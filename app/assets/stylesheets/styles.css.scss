@@ -1,0 +1,32 @@
+// body {
+//     background-image: asset-url('Caesar_Cipher.jpeg');
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+.custom-hero {
+    background-color: black;
+    opacity:0.9;
+    color: white;
+    height: 700px;
+    // position: relative;
+  }
+
+  .custom-image {
+    position: absolute;
+    top: 60;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .buttons {
+    align-items: center;
+  }
+
+  .round-logo {
+    border-radius: 40px;
+  }
+
